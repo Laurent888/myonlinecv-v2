@@ -41,6 +41,15 @@ const SingleProjectWrapper = styled.div`
   display: flex;
   flex-direction: ${props => (props.left ? "row-reverse" : "row")};
 
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+    height: 40rem;
+  }
+
+  @media (max-width: ${props => props.theme.tabletWidthBis}) {
+    flex-direction: column;
+    height: 37rem;
+  }
+
   .description-container {
     height: 100%;
     width: 100%;
@@ -57,6 +66,10 @@ const SingleProjectWrapper = styled.div`
         font-size: 3rem;
         font-weight: 300;
         margin-bottom: 3rem;
+
+        @media (max-width: ${props => props.theme.tabletWidth}) {
+          margin-bottom: 1rem;
+        }
       }
 
       .button-row {
@@ -72,6 +85,10 @@ const SingleProjectWrapper = styled.div`
     width: 100%;
     overflow: hidden;
     position: relative;
+
+    @media (max-width: ${props => props.theme.tabletWidthBis}) {
+      display: none;
+    }
 
     .image-title {
       font-style: italic;

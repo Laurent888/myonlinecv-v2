@@ -24,7 +24,7 @@ const TechCard = ({ logo, title, text, level }) => {
 }
 
 const TechCardWrapper = styled.div`
-  margin: 0 3rem;
+  margin: 1rem 3rem;
   width: 30rem;
   height: 40rem;
   padding: 2rem;
@@ -35,6 +35,11 @@ const TechCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+    margin: 1rem 1rem;
+    height: 35rem;
+  }
 
   .stars {
     display: flex;
@@ -63,6 +68,10 @@ const TechCardWrapper = styled.div`
       height: 100%;
       object-fit: contain;
       object-position: center;
+    }
+
+    @media (max-width: ${props => props.theme.mobileWidth}) {
+      height: 30%;
     }
   }
 

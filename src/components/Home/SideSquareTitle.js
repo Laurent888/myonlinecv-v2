@@ -25,6 +25,14 @@ const SideSquareTitleWrapper = styled.div`
     ${props => (props.right ? "text-align: end;" : "text-align: start;")}
     text-transform: uppercase;
   }
+
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    width: 28rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
 `
 
 export default SideSquareTitle

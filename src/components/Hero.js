@@ -37,13 +37,6 @@ const HeroWrapper = styled.header`
       max-width: 60rem;
       color: ${props => props.theme.white};
 
-      @media (max-width: ${props => props.theme.tabletWidth}) {
-        left: 5%;
-        h1 {
-          font-size: 3rem;
-        }
-      }
-
       h1 {
         font-size: 5rem;
       }
@@ -57,6 +50,26 @@ const HeroWrapper = styled.header`
 
       p {
         font-size: 4rem;
+      }
+
+      @media (max-width: ${props => props.theme.tabletWidth}) {
+        left: 20%;
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: ${props => props.theme.mobileWidth}) {
+        left: 5%;
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 2rem;
+        }
       }
     }
 

@@ -22,6 +22,9 @@ const NavbarWrapper = styled.nav`
 
   .flex-row {
     justify-content: center;
+    @media (max-width: ${props => props.theme.tabletWidth}) {
+      display: none;
+    }
 
     li {
       margin: 0 2rem;

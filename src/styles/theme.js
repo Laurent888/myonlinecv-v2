@@ -9,7 +9,8 @@ const theme = {
   white: "#eeeeee",
 
   //Breakpoints
-  tabletWidth: "900px",
+  tabletWidth: "1000px",
+  tabletWidthBis: "750px",
   mobileWidth: "470px",
 }
 

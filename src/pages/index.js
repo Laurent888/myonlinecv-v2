@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import Title from "../components/Title"
 import SectionSkills from "../components/Home/SectionSkills"
 import SectionPortfolio from "../components/Home/SectionPortfolio"
+import AboutmeSection from "../components/Home/AboutmeSection"
 
 export default () => (
   <div>
@@ -15,7 +16,8 @@ export default () => (
       <SectionSkills />
       <Title title="My Portfolio" />
       <SectionPortfolio />
+      <Title title="Who am I ?" />
+      <AboutmeSection />
     </Layout>
-    Hello world!
   </div>
 )

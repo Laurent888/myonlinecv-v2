@@ -83,7 +83,12 @@ const SectionSkillsWrapper = styled.div`
   .card-list {
     display: flex;
     justify-content: center;
+    flex-wrap:wrap;
     margin-bottom: 3rem;
+
+    /* @media (max-width: ${props => props.theme.tabletWidth}) {
+      flex-direction: column;
+    } */
   }
 
   .side-title {
