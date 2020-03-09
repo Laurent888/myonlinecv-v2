@@ -5,6 +5,7 @@ import "../styles/index.css"
 import Hero from "../components/Hero"
 import Title from "../components/Title"
 import SectionSkills from "../components/Home/SectionSkills"
+import SectionPortfolio from "../components/Home/SectionPortfolio"
 
 export default () => (
   <div>
@@ -12,6 +13,8 @@ export default () => (
       <Hero />
       <Title title="Technical Skills" />
       <SectionSkills />
+      <Title title="My Portfolio" />
+      <SectionPortfolio />
     </Layout>
     Hello world!
   </div>

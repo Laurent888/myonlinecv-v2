@@ -22,6 +22,7 @@ const SectionSkills = () => {
     .filter((_, idx) => idx < 3)
     .map(({ node }, index) => (
       <TechCard
+        key={index}
         logo={logos[index]}
         title={node.frontmatter.title}
         text={node.html}
