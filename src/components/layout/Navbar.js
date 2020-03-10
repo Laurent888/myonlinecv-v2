@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
+import MenuIcon from "./MenuIcon"
+
 const Navbar = ({ visible }) => {
+  const [navVisible, setNavVisible] = useState(false)
+
   return (
-    <NavbarWrapper visible={visible}>
-      <ul className="flex-row">
+    <NavbarWrapper visible={visible} navVisible={navVisible}>
+      <ul className="flex-row" onClick={() => setNavVisible(false)}>
         <li>
           <a href="#skill-section">Tech Skills</a>{" "}
         </li>
@@ -18,6 +22,9 @@ const Navbar = ({ visible }) => {
           <a href="#contact-section">Contact</a>
         </li>
       </ul>
+      <div className="menu-icon" onClick={() => setNavVisible(!navVisible)}>
+        <MenuIcon />
+      </div>
     </NavbarWrapper>
   )
 }
@@ -31,12 +38,12 @@ const NavbarWrapper = styled.nav`
   background-color: ${props => props.visible && "rgba(248, 248, 248, 0.93)}"};
   box-shadow: ${props =>
     props.visible ? "0 3px 8px rgba(0, 0, 0, 0.3)" : "none"};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .flex-row {
     justify-content: center;
-    @media (max-width: ${props => props.theme.tabletWidth}) {
-      display: none;
-    }
 
     li {
       margin: 0 2rem;
@@ -44,6 +51,39 @@ const NavbarWrapper = styled.nav`
       font-size: 1.8rem;
       color: ${props =>
         props.visible ? props.theme.primaryColor : props.theme.white};
+    }
+
+    @media (max-width: ${props => props.theme.tabletWidth}) {
+      background-color: rgb(240, 240, 240);
+      position: fixed;
+      top: 0;
+      display: ${props => (props.navVisible ? "flex" : "none")};
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      li {
+        text-align: center;
+        width: 100%;
+        padding: 3rem 0;
+        color: ${props => props.theme.primaryColor};
+        border-bottom: 1px solid rgb(238, 183, 146);
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  @media (max-width: ${props => props.theme.tabletWidthBis}) {
+    background-color: transparent;
+    box-shadow: none;
+    .menu-icon {
+      display: block;
+      position: fixed;
+      right: 3rem;
+      top: 2rem;
     }
   }
 `

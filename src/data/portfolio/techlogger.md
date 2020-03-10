@@ -5,6 +5,7 @@ theme: "Collaboration"
 imagePath: "../../images/techlogger.jpg"
 category: "portfolio"
 url: "https://thetechlogger.herokuapp.com/"
+techUsed : ["React.js","NodeJS","MongoDB","Sass"]
 ---
 
-A fullstack application for a helpdesk service. Records logs from every team members. It uses Node.js and MongoDB on the backend. It uses React.js and Redux for the front end. All logs are saved in MongoDB database through an api that I wrote.
+A fullstack application for a helpdesk service. Records logs from every team members. It uses Node.js and MongoDB on the backend. 

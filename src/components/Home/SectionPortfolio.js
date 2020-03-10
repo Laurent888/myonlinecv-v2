@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
+import SectionPortfolioWrapper from "./SectionPortfolio.styles"
 
 import SingleProject from "./SingleProject"
 
@@ -33,6 +33,7 @@ const getProjectData = graphql`
           frontmatter {
             title
             url
+            techUsed
             imagePath {
               childImageSharp {
                 fluid(maxWidth: 691) {
@@ -46,15 +47,6 @@ const getProjectData = graphql`
       }
     }
   }
-`
-
-const SectionPortfolioWrapper = styled.section`
-  padding: 3rem 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `
 
 export default SectionPortfolio

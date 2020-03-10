@@ -7,6 +7,7 @@ const theme = {
   darkMedium: "#666666",
   darkLight: "#cacaca",
   white: "#eeeeee",
+  badgeColor: "rgb(238, 183, 146)",
 
   //Breakpoints
   tabletWidth: "1000px",

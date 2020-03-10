@@ -1,6 +1,8 @@
 a {
-  color:rgba(248, 248, 248, 0.8);
+  color:rgb(238, 183, 146);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+
+  transform: translateY(-15px);
 }
 
 GatsbyImageSharpFluid

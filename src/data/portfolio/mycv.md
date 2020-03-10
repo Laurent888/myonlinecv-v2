@@ -4,6 +4,8 @@ title: "My online CV"
 theme: "Portfolio"
 imagePath: "../../images/onlinecv.jpg"
 category: "portfolio"
+url: "https://laurent.tram.netlify.com"
+techUsed : ["React.js","Gatsby","Styled-component"]
 ---
 
 This website you are currently visiting has been designed and built from scratch using ReactJS and Gatsby.

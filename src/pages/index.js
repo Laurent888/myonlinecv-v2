@@ -36,7 +36,7 @@ export default () => {
   const [ref, visible] = useOnScreen({ rootMargin: "-50px" })
   return (
     <Layout visible={visible}>
-      <SEO title="Home|Laurent Tram" description="frontend developer javascript react reactjs css stockholm laurent tram backend fullstack" />
+      <SEO title="Home | Laurent Tram" description="frontend developer javascript react reactjs css stockholm laurent tram backend fullstack" />
       <div ref={ref}>
         <Hero />
       </div>

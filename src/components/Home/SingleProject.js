@@ -2,13 +2,18 @@ import React from "react"
 import Image from "gatsby-image"
 
 import SingleProjectWrapper from "./SingleProject.styles.js"
+import TechBadge from '../TechBadge'
 
 const SingleProject = ({ props, left }) => {
   // EXTRACT DATA FROM QUERY
   const title = props.frontmatter.title
   const url = props.frontmatter.url
+  const techUsed = props.frontmatter.techUsed
   const text = props.html
   const image = props.frontmatter.imagePath.childImageSharp.fluid
+
+  // RENDER THE BADGES
+  const renderedBadges = techUsed.map((item, index) => <TechBadge key={index} label={item} />)
 
   // RENDER THE COMPONENT
   return (
@@ -17,6 +22,7 @@ const SingleProject = ({ props, left }) => {
         <div className="description">
           <h4>{title}</h4>
           <div dangerouslySetInnerHTML={{ __html: text }}></div>
+          <div className="tech-list">{renderedBadges}</div>
           <div className="button-row">
             <a
               href={url}
