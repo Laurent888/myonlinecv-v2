@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaChevronDown } from "react-icons/fa"
 const ContactSection = () => {
   return (
     <ContactSectionWrapper id="contact-section">
-      <div className="links flex-row">
+      <div className="links">
         <div className="link">
           <a
             href="https://github.com/Laurent888"
@@ -31,7 +31,11 @@ const ContactSection = () => {
           </p>
         </div>
       </div>
-      <form className="contact-form">
+      <form
+        action="https://formspree.io/xayjvyqk"
+        method="POST"
+        className="contact-form"
+      >
         <div className="form-header">
           <h2>Or by contact form</h2>
           <FaChevronDown className="chevron-down" />
@@ -50,6 +54,10 @@ const ContactSection = () => {
 const ContactSectionWrapper = styled.section`
   margin: 5rem 0;
   .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 10rem;
     width: 100%;
     background-color: rgb(230, 230, 230);
@@ -77,6 +85,17 @@ const ContactSectionWrapper = styled.section`
       .link-icon {
         margin-left: 2rem;
         font-size: 3.5rem;
+      }
+    }
+
+    @media (max-width: ${props => props.theme.tabletWidthBis}) {
+      flex-direction: column;
+      height: 100%;
+
+      .link {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 0rem;
       }
     }
   }
@@ -160,6 +179,11 @@ const ContactSectionWrapper = styled.section`
         border: 1px solid ${props => props.theme.primaryColor};
         background-color: rgb(247, 231, 224);
       }
+    }
+
+    @media (max-width: ${props => props.theme.tabletWidthBis}) {
+      width: 100%;
+      padding: 2rem 1rem;
     }
   }
 `

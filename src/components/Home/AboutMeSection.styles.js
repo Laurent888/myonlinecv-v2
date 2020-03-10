@@ -8,6 +8,7 @@ const AboutmeSectionWrapper = styled.section`
 
   @media (max-width: ${props => props.theme.tabletWidth}) {
     padding: 0 1rem;
+    margin: 3rem 0;
   }
 
   .flex-row {
@@ -25,7 +26,7 @@ const AboutmeSectionWrapper = styled.section`
 
     @media (max-width: ${props => props.theme.tabletWidth}) {
       width: 80%;
-      margin-bottom: 1rem;
+      margin-bottom: -3rem;
     }
 
     .photo {
@@ -49,6 +50,7 @@ const AboutmeSectionWrapper = styled.section`
       width: 90%;
       margin-left: 0rem;
       padding: 1rem;
+      padding-top: 5rem;
     }
   }
 `
