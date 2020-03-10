@@ -20,7 +20,7 @@ const SingleProjectWrapper = styled.div`
     height: 100%;
     width: 100%;
     background-color: ${props =>
-    props.left ? "rgba(219, 138, 15, 0.1)" : "transparent"};
+      props.left ? "rgba(219, 138, 15, 0.1)" : "transparent"};
     position: relative;
 
     .description {
@@ -49,16 +49,16 @@ const SingleProjectWrapper = styled.div`
         }
       }
 
-      .tech-list{
-        position:absolute;
-        left:2rem;
-        bottom:2rem;
-        display:flex;
-        flex-direction:row;
-        align-items:center;
+      .tech-list {
+        position: absolute;
+        left: 2rem;
+        bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
         @media (max-width: ${props => props.theme.tabletWidth}) {
-          bottom:9rem;
+          bottom: 9rem;
         }
       }
     }

@@ -19,14 +19,14 @@ const MenuIconWrapper = styled.div`
   .bar {
     width: 100%;
     height: 2px;
-    background-color: ${props => props.theme.darkMedium};
+    background-color: ${props => props.theme.white};
   }
 
   .bar::before,
   .bar::after {
     content: "";
     height: 2px;
-    background-color: ${props => props.theme.darkMedium};
+    background-color: ${props => props.theme.white};
     position: absolute;
   }
 
