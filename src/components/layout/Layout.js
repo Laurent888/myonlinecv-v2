@@ -5,10 +5,10 @@ import { ThemeProvider } from "styled-components"
 
 import theme from "../../styles/theme"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, visible }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
+      <Navbar visible={visible} />
       {children}
       <Footer />
     </ThemeProvider>

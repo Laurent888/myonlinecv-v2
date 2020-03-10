@@ -1,4 +1,8 @@
 module.exports = {
+  siteMetadata: {
+    title: "Laurent Tram Frontend Developer",
+    descriptiom : "Frontend developer React in Stockholm"
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -6,6 +10,7 @@ module.exports = {
         // Add any options here
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     // FILE SYSTEM
     {

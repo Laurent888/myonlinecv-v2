@@ -34,6 +34,7 @@ const SectionSkills = () => {
     .filter((_, idx) => idx > 2)
     .map(({ node }, idx) => (
       <TechCard
+        key={`${idx}-backen`}
         logo={logosBack[idx]}
         title={node.frontmatter.title}
         text={node.html}
@@ -42,7 +43,7 @@ const SectionSkills = () => {
     ))
 
   return (
-    <SectionSkillsWrapper>
+    <SectionSkillsWrapper id="skill-section">
       <div className="side-title">
         <SideSquareTitle title="frontend skills" />
       </div>
@@ -83,12 +84,8 @@ const SectionSkillsWrapper = styled.div`
   .card-list {
     display: flex;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     margin-bottom: 3rem;
-
-    /* @media (max-width: ${props => props.theme.tabletWidth}) {
-      flex-direction: column;
-    } */
   }
 
   .side-title {

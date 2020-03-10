@@ -16,7 +16,11 @@ const SectionPortfolio = () => {
     />
   ))
 
-  return <SectionPortfolioWrapper>{renderedProject}</SectionPortfolioWrapper>
+  return (
+    <SectionPortfolioWrapper id="portfolio-section">
+      {renderedProject}
+    </SectionPortfolioWrapper>
+  )
 }
 
 const getProjectData = graphql`
