@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import SingleProject from "./SingleProject"
 
 const SingleProjectWrapper = styled.div`
   width: 100%;
