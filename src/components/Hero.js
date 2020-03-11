@@ -113,7 +113,7 @@ export default styled(Hero)`
     bottom: 0;
 
     @media (max-width: ${props => props.theme.mobileWidth}) {
-      bottom: 6rem;
+      display: none;
     }
   }
 `

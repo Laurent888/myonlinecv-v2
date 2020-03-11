@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-const MenuIcon = () => {
+const MenuIcon = ({ visible, open }) => {
   return (
-    <MenuIconWrapper>
+    <MenuIconWrapper visible={visible} open={open}>
       <div className="bar"></div>
     </MenuIconWrapper>
   )
@@ -17,27 +17,43 @@ const MenuIconWrapper = styled.div`
   position: relative;
 
   .bar {
-    width: 100%;
+    width: ${props => (props.open ? "0%" : "100%")};
     height: 2px;
-    background-color: ${props => props.theme.white};
+    transition: background-color 0.2s ease-in-out;
+    background-color: ${props =>
+      props.visible
+        ? props.theme.darkMedium
+        : props.open
+        ? props.theme.darkMedium
+        : props.theme.white};
   }
 
   .bar::before,
   .bar::after {
     content: "";
     height: 2px;
-    background-color: ${props => props.theme.white};
+    transition: background-color 0.3s ease-in-out;
+    background-color: ${props =>
+      props.visible
+        ? props.theme.darkMedium
+        : props.open
+        ? props.theme.darkMedium
+        : props.theme.white};
     position: absolute;
   }
 
   .bar::before {
-    width: 100%;
-    transform: translateY(-11px);
+    ${props =>
+      props.open
+        ? "width: 100%; transform:rotate(45deg);"
+        : "width: 100%;transform: translateY(-11px);"}
   }
 
   .bar::after {
-    width: 80%;
-    transform: translateY(11px);
+    ${props =>
+      props.open
+        ? "width: 100%; transform:rotate(-45deg);"
+        : "width: 80%;transform: translateY(11px);"}
   }
 `
 

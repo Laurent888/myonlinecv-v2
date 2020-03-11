@@ -23,7 +23,7 @@ const Navbar = ({ visible }) => {
         </li>
       </ul>
       <div className="menu-icon" onClick={() => setNavVisible(!navVisible)}>
-        <MenuIcon />
+        <MenuIcon visible={visible} open={navVisible} />
       </div>
     </NavbarWrapper>
   )
