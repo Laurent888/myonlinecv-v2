@@ -4,7 +4,7 @@ title: "My online CV"
 theme: "Portfolio"
 imagePath: "../../images/onlinecv.jpg"
 category: "portfolio"
-url: "https://laurent.tram.netlify.com"
+url: "https://laurenttram.netlify.com"
 techUsed : ["React.js","Gatsby","Styled-component"]
 ---
 
