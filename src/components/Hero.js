@@ -29,7 +29,7 @@ const getHeroImg = graphql`
   query {
     file(relativePath: { eq: "stockholm1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid
         }
       }
