@@ -76,7 +76,7 @@ const NavbarWrapper = styled.nav`
     display: none;
   }
 
-  @media (max-width: ${props => props.theme.tabletWidthBis}) {
+  @media (max-width: ${props => props.theme.tabletWidth}) {
     background-color: transparent;
     box-shadow: none;
     .menu-icon {

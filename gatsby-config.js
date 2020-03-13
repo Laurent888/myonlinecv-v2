@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Laurent Tram Frontend Developer",
-    descriptiom : "Frontend developer React in Stockholm"
+    descriptiom: "Frontend developer React in Stockholm",
   },
   plugins: [
     {
@@ -38,5 +38,6 @@ module.exports = {
     // IMAGE
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-polyfill-io`,
   ],
 }

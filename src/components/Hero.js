@@ -5,13 +5,12 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import wave from "../images/wave-1.svg"
 
-const Hero = ({ className }) => {
+const Hero = ({ className, isIE }) => {
   const { file } = useStaticQuery(getHeroImg)
   const image = file.childImageSharp.fluid
-  console.log(file)
 
   return (
-    <BackgroundImage fluid={image} className={className}>
+    <BackgroundImage fluid={image} className={className} isIE={isIE}>
       <div className="overlay"></div>
       <div className="hero-container">
         <div className="heroTitle">
@@ -19,7 +18,7 @@ const Hero = ({ className }) => {
           <p>Have a pleasant visit !</p>
           <h5>Laurent Tram</h5>
         </div>
-        <img src={wave} alt="wave" className="hero-wave" />
+        {!isIE && <img src={wave} alt="wave" className="hero-wave" />}
       </div>
     </BackgroundImage>
   )

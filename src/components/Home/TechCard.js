@@ -76,6 +76,7 @@ const TechCardWrapper = styled.div`
   }
 
   .content {
+    width: 100%;
     h3 {
       width: 100%;
       text-transform: uppercase;
