@@ -10,6 +10,7 @@ import AboutmeSection from "../components/Home/AboutmeSection"
 import ContactSection from "../components/Home/ContactSection"
 
 import SEO from "../components/SEO"
+import HeaderSection from "../components/Home/HeaderSection"
 
 const useOnScreen = options => {
   const ref = useRef()
@@ -46,11 +47,12 @@ export default () => {
     <Layout visible={visible}>
       <SEO
         title="Home | Laurent Tram"
-        description="frontend developer javascript react reactjs css stockholm laurent tram backend fullstack"
+        description="I'm a frontend developer specialized in React with strong knowledge in Javascript but also in backend technologies like Node.js, REST API."
       />
       <div ref={ref}>
         <Hero isIE={isIE} />
       </div>
+      <HeaderSection />
       <Title title="Technical Skills" />
       <SectionSkills />
       <Title title="My Portfolio" />

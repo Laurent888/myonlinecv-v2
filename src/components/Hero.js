@@ -14,7 +14,7 @@ const Hero = ({ className, isIE }) => {
       <div className="overlay"></div>
       <div className="hero-container">
         <div className="heroTitle">
-          <h1>Welcome to my online CV. </h1>
+          <h4>Welcome to my online CV </h4>
           <p>Have a pleasant visit !</p>
           <h5>Laurent Tram</h5>
         </div>
@@ -28,7 +28,7 @@ const getHeroImg = graphql`
   query {
     file(relativePath: { eq: "stockholm1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 2000, maxHeight: 1200, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -40,10 +40,14 @@ export default styled(Hero)`
   margin-top: -6rem;
   width: 100%;
   height: 50rem;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
   position: relative;
+
+  &::before {
+    background-attachment: fixed;
+  }
 
   .overlay {
     position: absolute;
@@ -69,7 +73,7 @@ export default styled(Hero)`
     color: ${props => props.theme.white};
     z-index: 20;
 
-    h1 {
+    h4 {
       font-size: 5rem;
     }
 
@@ -98,7 +102,7 @@ export default styled(Hero)`
     @media (max-width: ${props => props.theme.mobileWidth}) {
       top: 40%;
       left: 5%;
-      h1 {
+      h4 {
         font-size: 3rem;
       }
       p {
