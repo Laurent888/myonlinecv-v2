@@ -39,5 +39,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-polyfill-io`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Laurent Tram`,
+        short_name: `LaurentTram`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/images/android-chrome-512x512.png`,
+      },
+    },
   ],
 }
