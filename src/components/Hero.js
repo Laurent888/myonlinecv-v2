@@ -47,6 +47,9 @@ export default styled(Hero)`
 
   &::before {
     background-attachment: fixed;
+    @media (max-width: ${props => props.theme.tabletWidth}) {
+      background-attachment: scroll;
+    }
   }
 
   .overlay {
