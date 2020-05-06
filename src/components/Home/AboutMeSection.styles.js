@@ -43,7 +43,7 @@ const AboutmeSectionWrapper = styled.section`
     padding-left: 10rem;
     margin-left: -5rem;
     width: 70rem;
-    background-color: rgb(241, 186, 160);
+    background-color: ${props => props.theme.darkLight};
     color: ${props => props.theme.darkColor};
 
     @media (max-width: ${props => props.theme.tabletWidth}) {

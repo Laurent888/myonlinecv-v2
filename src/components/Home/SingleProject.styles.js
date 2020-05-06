@@ -19,8 +19,9 @@ const SingleProjectWrapper = styled.div`
   .description-container {
     height: 100%;
     width: 100%;
-    background-color: ${props =>
-      props.left ? "rgba(219, 138, 15, 0.1)" : "transparent"};
+    /* background-color: ${props =>
+      props.left ? "rgba(0, 0, 0, 0.1)" : "transparent"}; */
+    background-color: rgba(0, 0, 0, 0.1);
     position: relative;
 
     .description {
@@ -58,7 +59,7 @@ const SingleProjectWrapper = styled.div`
         align-items: center;
 
         @media (max-width: ${props => props.theme.tabletWidth}) {
-          bottom: 9rem;
+          bottom: 5rem;
         }
       }
     }
@@ -70,6 +71,7 @@ const SingleProjectWrapper = styled.div`
     width: 100%;
     overflow: hidden;
     position: relative;
+
 
     @media (max-width: ${props => props.theme.tabletWidthBis}) {
       display: none;
@@ -93,6 +95,10 @@ const SingleProjectWrapper = styled.div`
       background-color: rgba(0, 0, 0, 0.4);
       transition: all 0.4s ease-in-out;
       z-index: 10;
+
+      &:hover {
+      cursor: pointer
+    }
     }
 
     .image {

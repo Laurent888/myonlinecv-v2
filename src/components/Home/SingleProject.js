@@ -2,7 +2,7 @@ import React from "react"
 import Image from "gatsby-image"
 
 import SingleProjectWrapper from "./SingleProject.styles.js"
-import TechBadge from '../TechBadge'
+import TechBadge from "../TechBadge"
 
 const SingleProject = ({ props, left }) => {
   // EXTRACT DATA FROM QUERY
@@ -13,7 +13,9 @@ const SingleProject = ({ props, left }) => {
   const image = props.frontmatter.imagePath.childImageSharp.fluid
 
   // RENDER THE BADGES
-  const renderedBadges = techUsed.map((item, index) => <TechBadge key={index} label={item} />)
+  const renderedBadges = techUsed.map((item, index) => (
+    <TechBadge key={index} label={item} />
+  ))
 
   // RENDER THE COMPONENT
   return (
@@ -23,7 +25,7 @@ const SingleProject = ({ props, left }) => {
           <h4>{title}</h4>
           <div dangerouslySetInnerHTML={{ __html: text }}></div>
           <div className="tech-list">{renderedBadges}</div>
-          <div className="button-row">
+          {/* <div className="button-row">
             <a
               href={url}
               target="_blank"
@@ -32,12 +34,16 @@ const SingleProject = ({ props, left }) => {
             >
               Visit website
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="image-container">
+      <div
+        className="image-container"
+        onClick={() => window.open(url, "_blank")}
+      >
         <div className="overlay"></div>
         <p className="image-title">{title}</p>
+
         <Image fluid={image} className="image" />
       </div>
     </SingleProjectWrapper>

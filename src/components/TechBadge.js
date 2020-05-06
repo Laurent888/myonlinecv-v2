@@ -10,13 +10,13 @@ const TechBadge = ({ label }) => {
 }
 
 const TechBadgeWrapper = styled.div`
-  margin-right:1rem;
-  padding: .5rem 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
   background-color: ${props => props.theme.badgeColor};
   p {
-    color: ${props => props.theme.darkMedium};
+    color: ${props => props.theme.white};
     font-size: 1.4rem;
-    font-weight:600;
+    font-weight: 500;
   }
 `
 

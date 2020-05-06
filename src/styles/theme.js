@@ -1,13 +1,15 @@
 const theme = {
-  primaryColor: "#f7a779",
-  primaryColorTransparent: "rgba(247, 167, 120, 0.3)",
+  // primaryColor: "#f7a779",
+  primaryColor: "#181818",
+
+  primaryColorTransparent: "rgba(0, 0, 0, 0.3)",
   // primaryColor: "#0fbcf9",
-  secondaryColor: "#A57031",
+  secondaryColor: "#181818",
   darkColor: "#242424",
   darkMedium: "#666666",
   darkLight: "#cacaca",
   white: "#eeeeee",
-  badgeColor: "rgb(238, 183, 146)",
+  badgeColor: "rgb(100, 100, 100)",
 
   //Breakpoints
   tabletWidth: "1000px",

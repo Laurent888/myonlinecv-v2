@@ -35,7 +35,7 @@ const NavbarWrapper = styled.nav`
   left: 0;
   z-index: 50;
   transition: background-color 0.2s ease-in-out;
-  background-color: ${props => props.visible && "rgba(248, 248, 248, 0.93)}"};
+  background-color: ${props => props.visible && "rgba(50, 50, 50, 0.93)}"};
   box-shadow: ${props =>
     props.visible ? "0 3px 8px rgba(0, 0, 0, 0.3)" : "none"};
   display: flex;
@@ -50,7 +50,7 @@ const NavbarWrapper = styled.nav`
       padding: 2rem 0;
       font-size: 1.8rem;
       color: ${props =>
-        props.visible ? props.theme.primaryColor : props.theme.white};
+        props.visible ? props.theme.white : props.theme.white};
     }
 
     @media (max-width: ${props => props.theme.tabletWidth}) {
@@ -67,7 +67,7 @@ const NavbarWrapper = styled.nav`
         width: 100%;
         padding: 3rem 0;
         color: ${props => props.theme.primaryColor};
-        border-bottom: 1px solid rgb(238, 183, 146);
+        border-bottom: 1px solid ${props => props.theme.darkLight};
       }
     }
   }

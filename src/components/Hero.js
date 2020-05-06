@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import wave from "../images/wave-1.svg"
 
 const Hero = ({ className, isIE }) => {
+  console.log(className, isIE)
   const { file } = useStaticQuery(getHeroImg)
   const image = file.childImageSharp.fluid
 
@@ -40,17 +41,10 @@ export default styled(Hero)`
   margin-top: -6rem;
   width: 100%;
   height: 50rem;
-  background-position: center bottom;
+  background-position: center center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
   position: relative;
-
-  &::before {
-    background-attachment: fixed;
-    @media (max-width: ${props => props.theme.tabletWidth}) {
-      background-attachment: scroll;
-    }
-  }
 
   .overlay {
     position: absolute;
@@ -58,7 +52,7 @@ export default styled(Hero)`
     height: 50rem;
     top: 0;
     left: 0;
-    background-color: rgba(139, 65, 51, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 10;
   }
   .hero-container {

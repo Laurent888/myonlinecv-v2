@@ -3,7 +3,7 @@ import styled from "styled-components"
 const SideSquareTitleWrapper = styled.div`
   width: 35rem;
   padding: 2rem;
-  background-color: rgb(153, 72, 25);
+  background-color: ${props => props.theme.darkMedium};
   margin-left: ${props => (props.right ? "auto" : "none")};
   ${props =>
     props.right
