@@ -11,6 +11,11 @@ const AboutmeSectionWrapper = styled.section`
     margin: 3rem 0;
   }
 
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    padding: 0rem;
+    margin: 3rem 0;
+  }
+
   .flex-row {
     justify-content: center;
 

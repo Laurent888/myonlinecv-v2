@@ -11,8 +11,8 @@ const SingleProjectWrapper = styled.div`
   }
 
   @media (max-width: ${props => props.theme.tabletWidthBis}) {
-    flex-direction: column;
-    height: 37rem;
+    flex-direction: column-reverse;
+    height: 55rem;
   }
 
   /* DESCRIPTION BOX */
@@ -34,10 +34,14 @@ const SingleProjectWrapper = styled.div`
         font-weight: 300;
         margin-bottom: 3rem;
 
-        @media (max-width: ${props => props.theme.tabletWidth}) {
-          margin-bottom: 1rem;
-        }
+        
       }
+
+      @media (max-width: ${props => props.theme.tabletWidth}) {
+        padding: 2rem 1rem;
+          h4{
+            margin-bottom: 1rem;}
+        }
 
       .button-row {
         position: absolute;
@@ -71,11 +75,6 @@ const SingleProjectWrapper = styled.div`
     width: 100%;
     overflow: hidden;
     position: relative;
-
-
-    @media (max-width: ${props => props.theme.tabletWidthBis}) {
-      display: none;
-    }
 
     .image-title {
       font-style: italic;
@@ -114,6 +113,16 @@ const SingleProjectWrapper = styled.div`
       }
       .overlay {
         background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    @media (max-width: ${props => props.theme.tabletWidthBis}) {
+      display: block;
+      height: 35rem;
+
+      .image-title {
+        top: 50%;
+        transform: translateY(-50%)
       }
     }
   }
