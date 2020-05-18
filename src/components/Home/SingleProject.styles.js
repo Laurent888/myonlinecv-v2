@@ -67,6 +67,9 @@ const SingleProjectWrapper = styled.div`
         }
       }
     }
+    @media (max-width: ${props => props.theme.mobileWidth}) {
+          height: 40rem
+        }
   }
 
   /* IMAGE BOX */
@@ -118,7 +121,7 @@ const SingleProjectWrapper = styled.div`
 
     @media (max-width: ${props => props.theme.tabletWidthBis}) {
       display: flex;
-      height: 30%;
+      height: 15rem;
 
       .image-title {
         top: 50%;
