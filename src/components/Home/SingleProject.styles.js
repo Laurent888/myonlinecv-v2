@@ -17,7 +17,7 @@ const SingleProjectWrapper = styled.div`
 
   /* DESCRIPTION BOX */
   .description-container {
-    height: 100%;
+    height: 70%;
     width: 100%;
     /* background-color: ${props =>
       props.left ? "rgba(0, 0, 0, 0.1)" : "transparent"}; */
@@ -71,7 +71,7 @@ const SingleProjectWrapper = styled.div`
 
   /* IMAGE BOX */
   .image-container {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -117,8 +117,8 @@ const SingleProjectWrapper = styled.div`
     }
 
     @media (max-width: ${props => props.theme.tabletWidthBis}) {
-      display: block;
-      height: 35rem;
+      display: flex;
+      height: 30%;
 
       .image-title {
         top: 50%;
