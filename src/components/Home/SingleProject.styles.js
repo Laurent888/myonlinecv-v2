@@ -17,7 +17,7 @@ const SingleProjectWrapper = styled.div`
 
   /* DESCRIPTION BOX */
   .description-container {
-    height: 70%;
+    height: 100%;
     width: 100%;
     /* background-color: ${props =>
       props.left ? "rgba(0, 0, 0, 0.1)" : "transparent"}; */
