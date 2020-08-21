@@ -6,4 +6,3 @@ category: "tech"
 ---
 
 - Mongoose framework
-- All CRUD operations

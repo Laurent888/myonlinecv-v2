@@ -5,4 +5,5 @@ level: "4"
 category: "tech"
 ---
 
+- ES6
 - Typescript
