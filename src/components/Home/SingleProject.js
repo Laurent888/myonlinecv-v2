@@ -39,7 +39,11 @@ const SingleProject = ({ props, left }) => {
       </div>
       <div
         className="image-container"
-        onClick={() => window.open(url, "_blank")}
+        onClick={() => {
+          if (url !== "finted") {
+            window.open(url, "_blank")
+          }
+        }}
       >
         <div className="overlay"></div>
         <p className="image-title">{title}</p>
