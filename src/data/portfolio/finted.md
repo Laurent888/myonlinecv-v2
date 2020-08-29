@@ -4,7 +4,7 @@ title: "Finted: A buy & sell mobile App"
 theme: "Buy & sell"
 imagePath: "../../images/finted.png"
 category: "portfolio"
-url: "finted"
+url: "https://github.com/Laurent888/rn-finted"
 techUsed : ["React Native","GraphQL", "Apollo", "MongoDB"]
 ---
 
